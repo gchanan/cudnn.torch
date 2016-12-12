@@ -69,7 +69,7 @@ local algoNames = {fwdAlgoNames, bwdFilterAlgoNames, bwdDataAlgoNames}
 -- (like setConvolutionDescriptor does, to be used with it)
 -- However this is counterproductive for the purposes it's used in this module
 local function getConvolutionDescriptor_ffi(desc)
-   local CUDNN_DIM_MAX=8
+   local CUDNN_DIM_MAX=6
    local data = {
       dim_p = ffi.new('int[1]'),
       padA = ffi.new('int[?]', CUDNN_DIM_MAX),
